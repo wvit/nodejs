@@ -1,11 +1,15 @@
 const express = require('express');
+const bodyParser = require('body-parser')
+const path = require('path');
 const port = process.env.PORT || 1999;
 const app = express();
 
 //设置根路径
-app.set('views', './views');
+app.set('views', './views/pages');
 //设置模板引擎
 app.set('view engine', 'jade');
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '../node_modules')));
 app.listen(port);
 
 console.log('start succeed ' + port);
