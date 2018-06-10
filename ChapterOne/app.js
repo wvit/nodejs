@@ -8,8 +8,11 @@ const app = express();
 app.set('views', './views/pages');
 //设置模板引擎
 app.set('view engine', 'jade');
+//设置body-parser中间键
 app.use(bodyParser.json());
+//设置静态资源路径
 app.use(express.static(path.join(__dirname, '../node_modules')));
+//绑定端口
 app.listen(port);
 
 console.log('start succeed ' + port);
