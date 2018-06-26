@@ -1,29 +1,24 @@
 {
-  "name": "nodejs",
-  "version": "1.0.0",
-  "description": "nodejs入门学习",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bower": "bower"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wvit/nodejs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/wvit/nodejs/issues"
-  },
-  "homepage": "https://github.com/wvit/nodejs#readme",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "bootstrap": "^4.1.1",
-    "express": "^4.16.3",
-    "jade": "^1.11.0",
-    "jquery": "^3.3.1",
-    "moment": "^2.22.2",
-    "mongoose": "^5.1.4"
-  }
+    "name": "nodejs",
+    "version": "1.0.0",
+    "description": "nodejs入门学习",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wvit/nodejs.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wvit/nodejs/issues"
+    },
+    "homepage": "https://github.com/wvit/nodejs#readme",
+    "dependencies": {
+        "express": "^4.16.3",
+        "webpack": "^4.12.1",
+        "webpack-cli": "^3.0.8"
+    }
 }
