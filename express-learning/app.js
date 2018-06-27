@@ -2,10 +2,23 @@ const express = require('express');
 //启动express
 const app = express();
 
+//设置静态资源托管
+app.use(express.static('static'));
+
+
+app.use((req, res, next) => {
+    console.log('hello express');
+    next();
+})
+
 app.get('/', (req, res) => {
     //响应发送内容
-    res.type('html'); //设置内容类型
-    res.send('<h2>hello express</h2>');
+    //设置内容类型
+    res.type('html');
+    //获取静态资源
+
+    res.send(`<img src='img/girl.jpg'/>`);
+    console.log('this method is GET');
 });
 
 app.post('/', function(req, res) {
