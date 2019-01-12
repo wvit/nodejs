@@ -37,5 +37,5 @@ inquirer.prompt(options).then(result => {
         return axios.post(result.url, result.data);
     }
 }).then(res => {
-    console.log(res.data)
+    console.dir(res.data)
 })
