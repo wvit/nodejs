@@ -3,6 +3,7 @@
 const inquirer = require('inquirer');
 const axios = require('axios');
 const program = require('commander');
+const chalk = require('chalk');
 
 program
     .version('0.0.1')
@@ -37,5 +38,5 @@ inquirer.prompt(options).then(result => {
         return axios.post(result.url, result.data);
     }
 }).then(res => {
-    console.dir(res.data)
+    console.log(chalk.hex('#85991c')(JSON.stringify(res.data, null, 2)));
 })
