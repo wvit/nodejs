@@ -4,8 +4,10 @@ const Koa = require('koa');
 const axios = require('axios');
 const router = require('koa-router')();
 const bodyParser = require('koa-bodyparser');
+const cors = require('koa2-cors');
 const app = new Koa();
 
+app.use(cors());
 app.use(bodyParser());
 app.use(router.routes());
 
