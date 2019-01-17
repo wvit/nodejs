@@ -27,7 +27,7 @@ const options = [{
 ]
 
 inquirer.prompt(options).then(result => {
-    console.log(result)
+    console.log(result);
     if (result.method.toUpperCase() === 'GET') {
         let data = '';
         for (let key in data) {
@@ -35,7 +35,7 @@ inquirer.prompt(options).then(result => {
         }
         return axios.get(`${result.url}?${data.slice(0, -1)}`);
     } else if (result.method.toUpperCase() === 'POST') {
-        return axios.post(result.url, result.data);
+        return axios.post(result.url, eval(`(${result.data})`));
     }
 }).then(res => {
     console.log(chalk.hex('#85991c')(JSON.stringify(res.data, null, 2)));

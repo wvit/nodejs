@@ -14,7 +14,6 @@ const code =
  }
  `;
 
-vm.createContext(sandbox);
-vm.runInContext(code, sandbox);
+vm.runInNewContext(code, sandbox);
 
 console.log(sandbox);
